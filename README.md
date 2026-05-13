@@ -126,7 +126,7 @@ To add another PHP version (e.g., PHP 8.6):
 ## 📞 Contact & Support
 
 - **Telegram:** [@Ovcharov_Andrii](https://t.me/Ovcharov_Andrii)
-- **GitHub:** [github.com/laragon-modern](https://github.com/ovcharovcoder/laragon_6_modern)
+- **GitHub:** [github.com/laragon_6_modern](https://github.com/ovcharovcoder/laragon_6_modern)
 - **Email:** ovcharovcoder@gmail.com
 
 ---
