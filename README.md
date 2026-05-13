@@ -114,4 +114,28 @@ To add another PHP version (e.g., PHP 8.6):
 
 ---
 
-## 📁 Project Structure
+## 🔧 Important Notes
+
+- ⚠️ Always run `install.bat` as Administrator
+- ⚠️ If you have issues, restart your computer
+- ⚠️ Use Apache VS17 version – do NOT use the default one
+- ⚠️ The test project "hello" is available at `/hello/`
+
+---
+
+## 📞 Contact & Support
+
+- **Telegram:** [@Ovcharov_Andrii](https://t.me/Ovcharov_Andrii)
+- **GitHub:** [github.com/laragon-modern](https://github.com/laragon-modern)
+- **Email:** ovcharovcoder@gmail.com
+
+---
+
+## 📄 License
+
+This project is provided as-is for educational and development purposes.  
+Laragon, Apache, PHP, and phpMyAdmin are property of their respective owners.
+
+---
+
+**© 2026 Laragon 6.0 Modern Build — Andrii Ovcharov**
