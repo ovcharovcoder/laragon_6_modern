@@ -25,6 +25,7 @@
           <li><a href="#features" data-i18n="nav_features">Features</a></li>
           <li><a href="#download" data-i18n="nav_download">Download</a></li>
           <li><a href="#specs" data-i18n="nav_specs">Specs</a></li>
+          <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
           <li class="lang-switch">
             <button class="lang-btn" data-lang="en">EN</button>
             <button class="lang-btn" data-lang="uk">UA</button>
@@ -58,12 +59,10 @@
               </div>
               <div class="stat-item">
                 <div class="stat-number">🌐 Apache 2.4.66</div>
-                <div class="stat-label" data-i18n="stat_apache">
-                  VS17 with FCGID
-                </div>
+                <div class="stat-label" data-i18n="stat_apache">VS17</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">🗄️ phpMyAdmin</div>
+                <div class="stat-number">🗄️ phpMyAdmin 5.2.3</div>
                 <div class="stat-label" data-i18n="stat_pma">
                   pre-configured
                 </div>
@@ -72,7 +71,7 @@
           </div>
           <div class="hero-image">
             <i class="fas fa-server"></i>
-            <p style="margin-top: 12px; font-weight: 500; color: #2b7a4b">
+            <p style="margin-top: 12px; font-weight: 500; color: #2c6e9e">
               Laragon 6.0 Modern
             </p>
           </div>
@@ -110,10 +109,8 @@
             </div>
             <div class="card">
               <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-              <h3 data-i18n="card4_title">SSL + FCGID</h3>
-              <p data-i18n="card4_desc">
-                Ready HTTPS and fast PHP processing via FCGID
-              </p>
+              <h3 data-i18n="card4_title">SSL</h3>
+              <p data-i18n="card4_desc">Ready HTTPS out of the box</p>
             </div>
           </div>
         </div>
@@ -129,12 +126,12 @@
               Full build with PHP 8.5.6, Apache VS17, phpMyAdmin.
             </div>
             <a
-              href="https://drive.google.com/uc?export=download&id=1skDT5nxmGCMDUkyDSqTgr-zlat2y3Vy-"
+              href="https://drive.google.com/uc?export=download&id=1r-9AJWk_tpPlle1GDR2q6INmzTp7Otl2"
               class="btn-download"
               target="_blank"
             >
               <i class="fab fa-google-drive"></i>
-              <span data-i18n="download_btn">Download build (~350 MB)</span>
+              <span data-i18n="download_btn">Download build (330 MB)</span>
               <i class="fas fa-arrow-right"></i>
             </a>
             <div class="file-info">
@@ -144,7 +141,7 @@
               >
               <span class="info-badge"
                 ><i class="fas fa-weight-hanging"></i>
-                <span data-i18n="size_label">Size</span>: ~350 MB</span
+                <span data-i18n="size_label">Size</span>: 330 MB</span
               >
               <span class="info-badge"
                 ><i class="fas fa-calendar-alt"></i>
@@ -152,15 +149,15 @@
                 (2026)</span
               >
             </div>
-            <div style="margin-top: 20px; font-size: 0.8rem; color: #8a9a90">
+            <div style="margin-top: 20px; font-size: 0.8rem; color: #4a7a9a">
               <i class="fas fa-info-circle"></i>
               <span data-i18n="download_help"
                 >If download doesn't start automatically,</span
               >
               <a
-                href="https://drive.google.com/file/d/1skDT5nxmGCMDUkyDSqTgr-zlat2y3Vy-/view?usp=sharing"
+                href="https://drive.google.com/file/d/1r-9AJWk_tpPlle1GDR2q6INmzTp7Otl2/view?usp=sharing"
                 target="_blank"
-                style="color: #e67e22"
+                style="color: #f39c12"
               >
                 <span data-i18n="click_here">click here</span></a
               >
@@ -180,7 +177,7 @@
             <div class="php-badge">
               <span class="version">🐘 PHP 8.5.6</span>
               <span
-                style="color: #2b7a4b; margin-left: 10px"
+                style="color: #2c6e9e; margin-left: 10px"
                 data-i18n="primary"
                 >Primary</span
               >
@@ -194,9 +191,78 @@
           </div>
         </div>
 
+        <!-- FAQ Section -->
+        <div id="faq" class="section">
+          <div class="section-title" data-i18n="faq_title">
+            Frequently Asked Questions
+          </div>
+          <div class="section-sub" data-i18n="faq_sub">
+            Common questions and answers
+          </div>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span data-i18n="faq1_q"
+                  >Why does the installer window close and nothing
+                  happens?</span
+                ><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer" data-i18n="faq1_a">
+                You must run install.bat as Administrator. Right-click the file
+                → "Run as administrator".
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span data-i18n="faq2_q"
+                  >After switching to PHP 8.5, phpinfo still shows PHP 8.1.
+                  Why?</span
+                ><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer" data-i18n="faq2_a">
+                You need to restart the local server after changing the PHP
+                version. Right-click Laragon in tray → "Restart All".
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span data-i18n="faq3_q"
+                  >What is the login and password for phpMyAdmin?</span
+                ><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer" data-i18n="faq3_a">
+                Username: root, Password: (leave empty).
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span data-i18n="faq4_q"
+                  >Can I use this build on a different drive (D:, E:)?</span
+                ><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer" data-i18n="faq4_a">
+                Yes, during installation you can choose any drive: C:\, D:\,
+                E:\, etc. The script will automatically adjust all paths.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span data-i18n="faq5_q"
+                  >How do I add my own PHP extensions (e.g., xdebug)?</span
+                ><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer" data-i18n="faq5_a">
+                Copy the .dll file to the php-8.5.6\ext folder, then edit
+                php.ini (located in the same folder) and add:
+                extension=name_of_extension.dll. Restart Apache.
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- How to install -->
         <div class="install-steps">
-          <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: #1a3e2e">
+          <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: #1a3a5c">
             <i class="fas fa-cog"></i>
             <span data-i18n="howto_title">How to install?</span>
           </h3>
@@ -240,7 +306,7 @@
         <div class="db-info">
           <i
             class="fas fa-database"
-            style="font-size: 40px; color: #2b7a4b"
+            style="font-size: 40px; color: #2c6e9e"
           ></i>
           <h3 style="margin: 12px 0">phpMyAdmin</h3>
           <p data-i18n="db_access">
@@ -255,14 +321,14 @@
 
         <!-- CTA -->
         <div class="cta-section">
-          <h3 style="font-size: 1.6rem; color: #1a3e2e" data-i18n="cta_title">
+          <h3 style="font-size: 1.6rem; color: #1a3a5c" data-i18n="cta_title">
             Ready to start?
           </h3>
-          <p style="margin: 16px 0 24px; color: #4a6a5e" data-i18n="cta_desc">
+          <p style="margin: 16px 0 24px; color: #3a6a8a" data-i18n="cta_desc">
             Download the build and get a ready environment in 2 minutes
           </p>
           <a
-            href="https://drive.google.com/uc?export=download&id=1skDT5nxmGCMDUkyDSqTgr-zlat2y3Vy-"
+            href="https://drive.google.com/uc?export=download&id=1r-9AJWk_tpPlle1GDR2q6INmzTp7Otl2"
             class="btn-download"
             target="_blank"
           >
@@ -278,16 +344,13 @@
         <div class="footer-inner">
           <div>
             <div class="footer-logo">Laragon <span>6.0 Modern</span></div>
-            <p
-              data-i18n="footer_desc"
-              style="margin-top: 12px; max-width: 280px"
-            >
+            <p data-i18n="footer_desc" style="margin-top: 12px">
               Build for web developers who value speed and modern technologies
             </p>
           </div>
           <div class="footer-links">
             <div>
-              <h4 style="color: #f5a65a" data-i18n="footer_nav">Navigation</h4>
+              <h4 style="color: #20a7e1" data-i18n="footer_nav">Navigation</h4>
               <ul style="list-style: none; margin-top: 12px">
                 <li>
                   <a href="#features" data-i18n="footer_features">Features</a>
@@ -296,19 +359,56 @@
                   <a href="#download" data-i18n="footer_download">Download</a>
                 </li>
                 <li><a href="#specs" data-i18n="footer_specs">Specs</a></li>
+                <li><a href="#faq" data-i18n="footer_faq">FAQ</a></li>
               </ul>
             </div>
             <div>
-              <h4 style="color: #f5a65a" data-i18n="footer_tech">
+              <h4 style="color: #20a7e1" data-i18n="footer_tech">
                 Technologies
               </h4>
               <ul style="list-style: none; margin-top: 12px">
-                <li><a href="#">PHP 8.5.6</a></li>
-                <li><a href="#">Apache 2.4.66</a></li>
-                <li><a href="#">phpMyAdmin 5.2</a></li>
+                <li>
+                  <a
+                    href="https://www.php.net/downloads.php?version=8.5"
+                    target="_blank"
+                    >PHP 8.5.6</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.apachelounge.com/download/VS17/"
+                    target="_blank"
+                    >Apache 2.4.66</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.phpmyadmin.net/news/2025/10/8/phpmyadmin-523-is-released/"
+                    target="_blank"
+                    >phpMyAdmin 5.2.3</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
+        </div>
+        <div class="legal" data-i18n="legal_html">
+          This build uses third-party software:
+          <a href="https://laragon.org/" target="_blank">Laragon</a> (© Le Ngoc
+          Khoa),
+          <a href="https://httpd.apache.org/" target="_blank"
+            >Apache HTTP Server</a
+          >,
+          <a href="https://www.php.net/" target="_blank"
+            >PHP 8.5.6 / 8.4.19 / 8.3.30</a
+          >,
+          <a href="https://www.phpmyadmin.net/" target="_blank">phpMyAdmin</a>.
+          <p>
+            All trademarks and copyrights belong to their respective owners. The
+            purpose of this assembly is to provide one of the options for
+            organizing Laragon 6.0 and updating its packages to a modern state.
+            <strong>This is not an official release.</strong>
+          </p>
         </div>
         <div class="copyright" data-i18n="copyright">
           © 2026 Laragon 6.0 Modern Build — Andrii Ovcharov.
