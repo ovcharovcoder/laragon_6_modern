@@ -7,149 +7,313 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
     />
     <title>Laragon 6.0 Modern | PHP 8.5.6 Build</title>
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles (overrides & animations) -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Tailwind config customization (optional but keeps look consistent) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#e8f0fe',
+                100: '#d4e4fc',
+                500: '#2c6e9e',
+                600: '#1e4a76',
+                700: '#1a3a5c',
+              },
+              accent: '#20a7e1',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+              'fade-in-left': 'fadeInLeft 0.8s ease-out',
+              'fade-in-right': 'fadeInRight 0.8s ease-out',
+              float: 'float 3s ease-in-out infinite',
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <nav class="container">
-      <div class="navbar">
-        <div class="logo">Laragon <span>6.0 Modern</span></div>
-        <ul class="nav-links">
-          <li><a href="#features" data-i18n="nav_features">Features</a></li>
-          <li><a href="#download" data-i18n="nav_download">Download</a></li>
-          <li><a href="#specs" data-i18n="nav_specs">Specs</a></li>
-          <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
-          <li class="lang-switch">
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="uk">UA</button>
+  <body
+    class="font-sans bg-gradient-to-br from-primary-50 via-primary-100 to-white text-[#1a2c3e] antialiased min-h-screen overflow-x-hidden"
+  >
+    <!-- Navigation -->
+    <nav class="container mx-auto px-4 md:px-6">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center py-6 gap-5"
+      >
+        <div
+          class="logo text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent tracking-tight"
+        >
+          Laragon <span class="bg-none text-accent">6.0 Modern</span>
+        </div>
+        <ul
+          class="flex flex-wrap justify-center gap-6 md:gap-8 items-center list-none"
+        >
+          <li>
+            <a
+              href="#features"
+              data-i18n="nav_features"
+              class="font-medium text-[#2c5a7a] hover:text-accent transition-colors duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#download"
+              data-i18n="nav_download"
+              class="font-medium text-[#2c5a7a] hover:text-accent transition-colors duration-200"
+              >Download</a
+            >
+          </li>
+          <li>
+            <a
+              href="#specs"
+              data-i18n="nav_specs"
+              class="font-medium text-[#2c5a7a] hover:text-accent transition-colors duration-200"
+              >Specs</a
+            >
+          </li>
+          <li>
+            <a
+              href="#faq"
+              data-i18n="nav_faq"
+              class="font-medium text-[#2c5a7a] hover:text-accent transition-colors duration-200"
+              >FAQ</a
+            >
+          </li>
+          <li class="lang-switch flex gap-2 ml-0 md:ml-4 mt-2 md:mt-0">
+            <button
+              class="lang-btn text-sm font-semibold px-3 py-1 rounded-full transition-all duration-200 text-[#2c5a7a] hover:bg-primary-100"
+              data-lang="en"
+            >
+              EN
+            </button>
+            <button
+              class="lang-btn text-sm font-semibold px-3 py-1 rounded-full transition-all duration-200 text-[#2c5a7a] hover:bg-primary-100"
+              data-lang="uk"
+            >
+              UA
+            </button>
           </li>
         </ul>
       </div>
     </nav>
 
     <main>
-      <div class="container">
+      <div class="container mx-auto px-4 md:px-6">
         <!-- Hero Section -->
-        <div class="hero">
-          <div class="hero-content">
-            <div class="hero-badge" data-i18n="hero_badge">Ready to work</div>
-            <h1>
-              <span data-i18n="hero_title1">Laragon 6.0 Modern</span><br /><span
-                data-i18n="hero_title2"
-                >PHP 8.5.6 Build</span
-              >
+        <div
+          class="flex flex-col lg:flex-row items-stretch justify-between gap-10 py-12 md:py-16"
+        >
+          <div
+            class="flex-1 flex flex-col justify-center text-center lg:text-left"
+          >
+            <div
+              class="hero-badge text-primary-500 text-sm font-bold mb-6"
+              data-i18n="hero_badge"
+            >
+              Ready to work
+            </div>
+            <h1
+              class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight bg-gradient-to-br from-primary-700 to-primary-500 bg-clip-text text-transparent mb-5"
+            >
+              <span data-i18n="hero_title1">Laragon 6.0 Modern</span><br />
+              <span data-i18n="hero_title2">PHP 8.5.6 Build</span>
             </h1>
-            <p data-i18n="hero_desc">
+            <p
+              class="text-lg md:text-xl text-[#3a6a8a] max-w-2xl mx-auto lg:mx-0"
+              data-i18n="hero_desc"
+            >
               Portable web server for Windows. Install in 2 minutes. Everything
               needed for modern PHP development in one archive.
             </p>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-number">🐘 PHP 8.5.6</div>
-                <div class="stat-label" data-i18n="stat_main">
+            <div
+              class="flex flex-wrap justify-center lg:justify-start gap-8 mt-8"
+            >
+              <div>
+                <div class="font-extrabold text-accent">🐘 PHP 8.5.6</div>
+                <div class="text-sm text-[#4a7a9a]" data-i18n="stat_main">
                   primary version
                 </div>
               </div>
-              <div class="stat-item">
-                <div class="stat-number">🌐 Apache 2.4.66</div>
-                <div class="stat-label" data-i18n="stat_apache">VS17</div>
+              <div>
+                <div class="font-extrabold text-accent">🌐 Apache 2.4.66</div>
+                <div class="text-sm text-[#4a7a9a]" data-i18n="stat_apache">
+                  VS17
+                </div>
               </div>
-              <div class="stat-item">
-                <div class="stat-number">🗄️ phpMyAdmin 5.2.3</div>
-                <div class="stat-label" data-i18n="stat_pma">
+              <div>
+                <div class="font-extrabold text-accent">
+                  🗄️ phpMyAdmin 5.2.3
+                </div>
+                <div class="text-sm text-[#4a7a9a]" data-i18n="stat_pma">
                   pre-configured
                 </div>
               </div>
             </div>
           </div>
-          <div class="hero-image">
-            <i class="fas fa-server"></i>
-            <p style="margin-top: 12px; font-weight: 500; color: #2c6e9e">
+          <div
+            class="flex-1 flex flex-col items-center justify-center bg-white/40 backdrop-blur-sm rounded-3xl p-8 md:p-12 text-center"
+          >
+            <i
+              class="fas fa-server text-7xl md:text-8xl text-primary-500 drop-shadow-lg animate-float"
+            ></i>
+            <p class="mt-3 font-semibold text-primary-600">
               Laragon 6.0 Modern
             </p>
           </div>
         </div>
 
-        <!-- Features -->
-        <div id="features" class="section">
-          <div class="section-title" data-i18n="features_title">
+        <!-- Features Section -->
+        <div id="features" class="py-12 md:py-16">
+          <div
+            class="text-center text-3xl md:text-4xl font-bold text-primary-700 mb-4"
+            data-i18n="features_title"
+          >
             Why choose this build?
           </div>
-          <div class="section-sub" data-i18n="features_sub">
+          <div
+            class="text-center text-[#4a7a9a] max-w-2xl mx-auto mb-12"
+            data-i18n="features_sub"
+          >
             Tested, stable, convenient
           </div>
-          <div class="card-grid">
-            <div class="card">
-              <div class="card-icon"><i class="fas fa-bolt"></i></div>
-              <h3 data-i18n="card1_title">Fast start</h3>
-              <p data-i18n="card1_desc">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="card bg-white rounded-3xl p-8 shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="card-icon text-5xl text-accent mb-5">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-primary-600 mb-3"
+                data-i18n="card1_title"
+              >
+                Fast start
+              </h3>
+              <p class="text-[#4a7a9a] text-sm" data-i18n="card1_desc">
                 Automatic virtual hosts, SSL certificate, one click to work
               </p>
             </div>
-            <div class="card">
-              <div class="card-icon"><i class="fas fa-database"></i></div>
-              <h3 data-i18n="card2_title">MySQL + phpMyAdmin</h3>
-              <p data-i18n="card2_desc">
+            <div
+              class="card bg-white rounded-3xl p-8 shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="card-icon text-5xl text-accent mb-5">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-primary-600 mb-3"
+                data-i18n="card2_title"
+              >
+                MySQL + phpMyAdmin
+              </h3>
+              <p class="text-[#4a7a9a] text-sm" data-i18n="card2_desc">
                 Databases out of the box and easy management via phpMyAdmin
               </p>
             </div>
-            <div class="card">
-              <div class="card-icon"><i class="fab fa-php"></i></div>
-              <h3 data-i18n="card3_title">PHP 8.5.6</h3>
-              <p data-i18n="card3_desc">
+            <div
+              class="card bg-white rounded-3xl p-8 shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="card-icon text-5xl text-accent mb-5">
+                <i class="fab fa-php"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-primary-600 mb-3"
+                data-i18n="card3_title"
+              >
+                PHP 8.5.6
+              </h3>
+              <p class="text-[#4a7a9a] text-sm" data-i18n="card3_desc">
                 Latest stable PHP with full JIT support
               </p>
             </div>
-            <div class="card">
-              <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-              <h3 data-i18n="card4_title">SSL</h3>
-              <p data-i18n="card4_desc">Ready HTTPS out of the box</p>
+            <div
+              class="card bg-white rounded-3xl p-8 shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="card-icon text-5xl text-accent mb-5">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-primary-600 mb-3"
+                data-i18n="card4_title"
+              >
+                SSL
+              </h3>
+              <p class="text-[#4a7a9a] text-sm" data-i18n="card4_desc">
+                Ready HTTPS out of the box
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Download Section -->
-        <div id="download" class="section" style="padding-top: 0">
-          <div class="download-card">
-            <div class="download-icon"><i class="fas fa-download"></i></div>
-            <div class="download-title" data-i18n="download_title">
+        <div id="download" class="py-6 md:py-8">
+          <div
+            class="download-card bg-gradient-to-br from-white to-primary-50 rounded-3xl shadow-xl border border-primary-100 p-8 md:p-12 text-center my-6"
+          >
+            <div class="text-6xl text-primary-500 mb-4">
+              <i class="fas fa-download"></i>
+            </div>
+            <div
+              class="text-2xl md:text-3xl font-bold text-primary-700 mb-3"
+              data-i18n="download_title"
+            >
               Laragon 6.0 Modern
             </div>
-            <div class="download-sub" data-i18n="download_sub">
+            <div
+              class="text-[#4a7a9a] max-w-md mx-auto mb-6"
+              data-i18n="download_sub"
+            >
               Full build with PHP 8.5.6, Apache VS17, phpMyAdmin.
             </div>
+            <!-- Виправлена кнопка: прибрано pulse, залишено плавне збільшення тіні та масштабування -->
             <a
               href="https://drive.google.com/uc?export=download&id=1wScikov0ROmqkpPTfi2qpn5TTVnXoauF"
-              class="btn-download"
+              class="btn-download inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-primary-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
               target="_blank"
             >
-              <i class="fab fa-google-drive"></i>
+              <i class="fab fa-google-drive text-xl"></i>
               <span data-i18n="download_btn">Download build (330 MB)</span>
               <i class="fas fa-arrow-right"></i>
             </a>
-            <div class="file-info">
-              <span class="info-badge"
-                ><i class="fas fa-file-archive"></i>
+            <div
+              class="flex flex-wrap justify-center gap-4 mt-8 pt-6 border-t border-primary-100"
+            >
+              <span
+                class="info-badge bg-primary-50 px-4 py-2 rounded-full text-sm font-medium text-primary-600"
+                ><i class="fas fa-file-archive mr-2 text-accent"></i>
                 <span data-i18n="format">Format</span>: ZIP</span
               >
-              <span class="info-badge"
-                ><i class="fas fa-weight-hanging"></i>
+              <span
+                class="info-badge bg-primary-50 px-4 py-2 rounded-full text-sm font-medium text-primary-600"
+                ><i class="fas fa-weight-hanging mr-2 text-accent"></i>
                 <span data-i18n="size_label">Size</span>: 330 MB</span
               >
-              <span class="info-badge"
-                ><i class="fas fa-calendar-alt"></i>
+              <span
+                class="info-badge bg-primary-50 px-4 py-2 rounded-full text-sm font-medium text-primary-600"
+                ><i class="fas fa-calendar-alt mr-2 text-accent"></i>
                 <span data-i18n="version_label">Version</span>: 6.0.0
                 (2026)</span
               >
             </div>
-            <div style="margin-top: 20px; font-size: 0.8rem; color: #4a7a9a">
+            <div class="mt-5 text-sm text-primary-500">
               <i class="fas fa-info-circle"></i>
               <span data-i18n="download_help"
                 >If download doesn't start automatically,</span
@@ -157,7 +321,7 @@
               <a
                 href="https://drive.google.com/file/d/1wScikov0ROmqkpPTfi2qpn5TTVnXoauF/view?usp=sharing"
                 target="_blank"
-                style="color: #f39c12"
+                class="text-amber-500 hover:underline"
               >
                 <span data-i18n="click_here">click here</span></a
               >
@@ -166,92 +330,153 @@
         </div>
 
         <!-- PHP Versions -->
-        <div id="specs" class="section">
-          <div class="section-title" data-i18n="php_title">
+        <div id="specs" class="py-12 md:py-16">
+          <div
+            class="text-center text-3xl md:text-4xl font-bold text-primary-700 mb-4"
+            data-i18n="php_title"
+          >
             Available PHP versions
           </div>
-          <div class="section-sub" data-i18n="php_sub">
+          <div
+            class="text-center text-[#4a7a9a] max-w-2xl mx-auto mb-10"
+            data-i18n="php_sub"
+          >
             Switch between versions with one click
           </div>
-          <div class="php-versions">
-            <div class="php-badge">
-              <span class="version">🐘 PHP 8.5.6</span>
-              <span
-                style="color: #2c6e9e; margin-left: 10px"
-                data-i18n="primary"
+          <div class="flex flex-wrap justify-center gap-5">
+            <div
+              class="php-badge bg-white rounded-full px-6 py-3 shadow-sm border border-primary-100 font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            >
+              <span class="version text-accent">🐘 PHP 8.5.6</span>
+              <span class="ml-2 text-primary-500" data-i18n="primary"
                 >Primary</span
               >
             </div>
-            <div class="php-badge">
-              <span class="version">🐘 PHP 8.4.19</span>
+            <div
+              class="php-badge bg-white rounded-full px-6 py-3 shadow-sm border border-primary-100 font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            >
+              <span class="version text-accent">🐘 PHP 8.4.19</span>
             </div>
-            <div class="php-badge">
-              <span class="version">🐘 PHP 8.3.30</span>
+            <div
+              class="php-badge bg-white rounded-full px-6 py-3 shadow-sm border border-primary-100 font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            >
+              <span class="version text-accent">🐘 PHP 8.3.30</span>
             </div>
           </div>
         </div>
 
         <!-- FAQ Section -->
-        <div id="faq" class="section">
-          <div class="section-title" data-i18n="faq_title">
+        <div id="faq" class="py-12 md:py-16">
+          <div
+            class="text-center text-3xl md:text-4xl font-bold text-primary-700 mb-4"
+            data-i18n="faq_title"
+          >
             Frequently Asked Questions
           </div>
-          <div class="section-sub" data-i18n="faq_sub">
+          <div
+            class="text-center text-[#4a7a9a] max-w-2xl mx-auto mb-12"
+            data-i18n="faq_sub"
+          >
             Common questions and answers
           </div>
-          <div class="faq-grid">
-            <div class="faq-item">
-              <div class="faq-question">
+          <div class="faq-grid max-w-3xl mx-auto flex flex-col gap-5">
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-sm border border-primary-50 transition-all"
+            >
+              <div
+                class="faq-question flex justify-between items-center text-lg font-bold text-primary-600 cursor-pointer"
+              >
                 <span data-i18n="faq1_q"
                   >Why does the installer window close and nothing
                   happens?</span
-                ><i class="fas fa-chevron-down"></i>
+                ><i
+                  class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                ></i>
               </div>
-              <div class="faq-answer" data-i18n="faq1_a">
+              <div
+                class="faq-answer mt-4 text-[#4a7a9a] hidden"
+                data-i18n="faq1_a"
+              >
                 You must run install.bat as Administrator. Right-click the file
                 → "Run as administrator".
               </div>
             </div>
-            <div class="faq-item">
-              <div class="faq-question">
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-sm border border-primary-50 transition-all"
+            >
+              <div
+                class="faq-question flex justify-between items-center text-lg font-bold text-primary-600 cursor-pointer"
+              >
                 <span data-i18n="faq2_q"
                   >After switching to PHP 8.5, phpinfo still shows PHP 8.1.
                   Why?</span
-                ><i class="fas fa-chevron-down"></i>
+                ><i
+                  class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                ></i>
               </div>
-              <div class="faq-answer" data-i18n="faq2_a">
+              <div
+                class="faq-answer mt-4 text-[#4a7a9a] hidden"
+                data-i18n="faq2_a"
+              >
                 You need to restart the local server after changing the PHP
                 version. Right-click Laragon in tray → "Restart All".
               </div>
             </div>
-            <div class="faq-item">
-              <div class="faq-question">
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-sm border border-primary-50 transition-all"
+            >
+              <div
+                class="faq-question flex justify-between items-center text-lg font-bold text-primary-600 cursor-pointer"
+              >
                 <span data-i18n="faq3_q"
                   >What is the login and password for phpMyAdmin?</span
-                ><i class="fas fa-chevron-down"></i>
+                ><i
+                  class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                ></i>
               </div>
-              <div class="faq-answer" data-i18n="faq3_a">
+              <div
+                class="faq-answer mt-4 text-[#4a7a9a] hidden"
+                data-i18n="faq3_a"
+              >
                 Username: root, Password: (leave empty).
               </div>
             </div>
-            <div class="faq-item">
-              <div class="faq-question">
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-sm border border-primary-50 transition-all"
+            >
+              <div
+                class="faq-question flex justify-between items-center text-lg font-bold text-primary-600 cursor-pointer"
+              >
                 <span data-i18n="faq4_q"
                   >Can I use this build on a different drive (D:, E:)?</span
-                ><i class="fas fa-chevron-down"></i>
+                ><i
+                  class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                ></i>
               </div>
-              <div class="faq-answer" data-i18n="faq4_a">
+              <div
+                class="faq-answer mt-4 text-[#4a7a9a] hidden"
+                data-i18n="faq4_a"
+              >
                 Yes, during installation you can choose any drive: C:\, D:\,
                 E:\, etc. The script will automatically adjust all paths.
               </div>
             </div>
-            <div class="faq-item">
-              <div class="faq-question">
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-sm border border-primary-50 transition-all"
+            >
+              <div
+                class="faq-question flex justify-between items-center text-lg font-bold text-primary-600 cursor-pointer"
+              >
                 <span data-i18n="faq5_q"
                   >How do I add my own PHP extensions (e.g., xdebug)?</span
-                ><i class="fas fa-chevron-down"></i>
+                ><i
+                  class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                ></i>
               </div>
-              <div class="faq-answer" data-i18n="faq5_a">
+              <div
+                class="faq-answer mt-4 text-[#4a7a9a] hidden"
+                data-i18n="faq5_a"
+              >
                 Copy the .dll file to the php-8.5.6\ext folder, then edit
                 php.ini (located in the same folder) and add:
                 extension=name_of_extension.dll. Restart Apache.
@@ -260,56 +485,103 @@
           </div>
         </div>
 
-        <!-- How to install -->
-        <div class="install-steps">
-          <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: #1a3a5c">
-            <i class="fas fa-cog"></i>
+        <!-- How to install Steps -->
+        <div class="install-steps py-6">
+          <h3
+            class="text-xl md:text-2xl font-bold text-primary-700 mb-6 flex items-center gap-2"
+          >
+            <i class="fas fa-cog text-accent"></i>
             <span data-i18n="howto_title">How to install?</span>
           </h3>
-          <div class="steps-grid">
-            <div class="step-card">
-              <div class="step-number">1</div>
-              <div class="step-title" data-i18n="step1_title">
+          <div
+            class="steps-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <div
+              class="step-card bg-white rounded-xl p-5 shadow-md transition-all duration-300 hover:-translate-y-1"
+            >
+              <div class="step-number text-3xl font-extrabold text-accent">
+                1
+              </div>
+              <div
+                class="step-title font-semibold text-primary-600 my-2"
+                data-i18n="step1_title"
+              >
                 Extract the archive
               </div>
-              <div class="step-desc" data-i18n="step1_desc">
+              <div
+                class="step-desc text-sm text-[#4a7a9a]"
+                data-i18n="step1_desc"
+              >
                 To any folder on C:, D: or other drive
               </div>
             </div>
-            <div class="step-card">
-              <div class="step-number">2</div>
-              <div class="step-title" data-i18n="step2_title">
+            <div
+              class="step-card bg-white rounded-xl p-5 shadow-md transition-all duration-300 hover:-translate-y-1"
+            >
+              <div class="step-number text-3xl font-extrabold text-accent">
+                2
+              </div>
+              <div
+                class="step-title font-semibold text-primary-600 my-2"
+                data-i18n="step2_title"
+              >
                 Run install.bat
               </div>
-              <div class="step-desc" data-i18n="step2_desc">
+              <div
+                class="step-desc text-sm text-[#4a7a9a]"
+                data-i18n="step2_desc"
+              >
                 As Administrator (right-click)
               </div>
             </div>
-            <div class="step-card">
-              <div class="step-number">3</div>
-              <div class="step-title" data-i18n="step3_title">Run Laragon</div>
-              <div class="step-desc" data-i18n="step3_desc">
+            <div
+              class="step-card bg-white rounded-xl p-5 shadow-md transition-all duration-300 hover:-translate-y-1"
+            >
+              <div class="step-number text-3xl font-extrabold text-accent">
+                3
+              </div>
+              <div
+                class="step-title font-semibold text-primary-600 my-2"
+                data-i18n="step3_title"
+              >
+                Run Laragon
+              </div>
+              <div
+                class="step-desc text-sm text-[#4a7a9a]"
+                data-i18n="step3_desc"
+              >
                 Select Apache VS17 and PHP 8.5.6
               </div>
             </div>
-            <div class="step-card">
-              <div class="step-number">4</div>
-              <div class="step-title" data-i18n="step4_title">Work!</div>
-              <div class="step-desc" data-i18n="step4_desc">
+            <div
+              class="step-card bg-white rounded-xl p-5 shadow-md transition-all duration-300 hover:-translate-y-1"
+            >
+              <div class="step-number text-3xl font-extrabold text-accent">
+                4
+              </div>
+              <div
+                class="step-title font-semibold text-primary-600 my-2"
+                data-i18n="step4_title"
+              >
+                Work!
+              </div>
+              <div
+                class="step-desc text-sm text-[#4a7a9a]"
+                data-i18n="step4_desc"
+              >
                 Open http://localhost/hello/
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Database info -->
-        <div class="db-info">
-          <i
-            class="fas fa-database"
-            style="font-size: 40px; color: #2c6e9e"
-          ></i>
-          <h3 style="margin: 12px 0">phpMyAdmin</h3>
-          <p data-i18n="db_access">
+        <!-- Database Info -->
+        <div
+          class="db-info bg-white rounded-3xl p-8 my-8 text-center border border-primary-100"
+        >
+          <i class="fas fa-database text-5xl text-primary-500 mb-3"></i>
+          <h3 class="text-2xl font-bold text-primary-700 mb-2">phpMyAdmin</h3>
+          <p class="text-[#4a7a9a]" data-i18n="db_access">
             Database access: <strong>http://localhost/phpmyadmin</strong>
           </p>
           <p>
@@ -320,57 +592,90 @@
         </div>
 
         <!-- CTA -->
-        <div class="cta-section">
-          <h3 style="font-size: 1.6rem; color: #1a3a5c" data-i18n="cta_title">
+        <div class="cta-section text-center py-12 my-4">
+          <h3
+            class="text-2xl md:text-3xl font-bold text-primary-700"
+            data-i18n="cta_title"
+          >
             Ready to start?
           </h3>
-          <p style="margin: 16px 0 24px; color: #3a6a8a" data-i18n="cta_desc">
+          <p class="my-4 text-[#3a6a8a]" data-i18n="cta_desc">
             Download the build and get a ready environment in 2 minutes
           </p>
+          <!-- Друга кнопка теж виправлена -->
           <a
             href="https://drive.google.com/uc?export=download&id=1wScikov0ROmqkpPTfi2qpn5TTVnXoauF"
-            class="btn-download"
+            class="btn-download inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-primary-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             target="_blank"
+            ><i class="fas fa-download"></i>
+            <span data-i18n="cta_btn">Download Laragon 6.0 Modern</span></a
           >
-            <i class="fas fa-download"></i>
-            <span data-i18n="cta_btn">Download Laragon 6.0 Modern</span>
-          </a>
         </div>
       </div>
     </main>
 
-    <footer>
-      <div class="container">
-        <div class="footer-inner">
+    <!-- Footer -->
+    <footer class="bg-[#1a2e3e] text-[#b8d4e8] pt-12 pb-8 mt-16 rounded-t-3xl">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-col md:flex-row justify-between gap-8">
           <div>
-            <div class="footer-logo">Laragon <span>6.0 Modern</span></div>
-            <p data-i18n="footer_desc" style="margin-top: 12px">
+            <div class="footer-logo text-2xl font-bold text-[#f5e7d9]">
+              Laragon <span class="text-accent">6.0 Modern</span>
+            </div>
+            <p class="mt-3 max-w-xs" data-i18n="footer_desc">
               Build for web developers who value speed and modern technologies
             </p>
           </div>
-          <div class="footer-links">
+          <div class="flex flex-wrap gap-10">
             <div>
-              <h4 style="color: #20a7e1" data-i18n="footer_nav">Navigation</h4>
-              <ul style="list-style: none; margin-top: 12px">
+              <h4 class="text-accent font-semibold" data-i18n="footer_nav">
+                Navigation
+              </h4>
+              <ul class="mt-3 space-y-2">
                 <li>
-                  <a href="#features" data-i18n="footer_features">Features</a>
+                  <a
+                    href="#features"
+                    class="hover:text-accent transition"
+                    data-i18n="footer_features"
+                    >Features</a
+                  >
                 </li>
                 <li>
-                  <a href="#download" data-i18n="footer_download">Download</a>
+                  <a
+                    href="#download"
+                    class="hover:text-accent transition"
+                    data-i18n="footer_download"
+                    >Download</a
+                  >
                 </li>
-                <li><a href="#specs" data-i18n="footer_specs">Specs</a></li>
-                <li><a href="#faq" data-i18n="footer_faq">FAQ</a></li>
+                <li>
+                  <a
+                    href="#specs"
+                    class="hover:text-accent transition"
+                    data-i18n="footer_specs"
+                    >Specs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    class="hover:text-accent transition"
+                    data-i18n="footer_faq"
+                    >FAQ</a
+                  >
+                </li>
               </ul>
             </div>
             <div>
-              <h4 style="color: #20a7e1" data-i18n="footer_tech">
+              <h4 class="text-accent font-semibold" data-i18n="footer_tech">
                 Technologies
               </h4>
-              <ul style="list-style: none; margin-top: 12px">
+              <ul class="mt-3 space-y-2">
                 <li>
                   <a
                     href="https://www.php.net/downloads.php?version=8.5"
                     target="_blank"
+                    class="hover:text-accent transition"
                     >PHP 8.5.6</a
                   >
                 </li>
@@ -378,6 +683,7 @@
                   <a
                     href="https://www.apachelounge.com/download/VS17/"
                     target="_blank"
+                    class="hover:text-accent transition"
                     >Apache 2.4.66</a
                   >
                 </li>
@@ -385,6 +691,7 @@
                   <a
                     href="https://www.phpmyadmin.net/news/2025/10/8/phpmyadmin-523-is-released/"
                     target="_blank"
+                    class="hover:text-accent transition"
                     >phpMyAdmin 5.2.3</a
                   >
                 </li>
@@ -392,26 +699,48 @@
             </div>
           </div>
         </div>
-        <div class="legal" data-i18n="legal_html">
-          This build uses third-party software:
-          <a href="https://laragon.org/" target="_blank">Laragon</a> (© Le Ngoc
-          Khoa),
-          <a href="https://httpd.apache.org/" target="_blank"
-            >Apache HTTP Server</a
-          >,
-          <a href="https://www.php.net/" target="_blank"
-            >PHP 8.5.6 / 8.4.19 / 8.3.30</a
-          >,
-          <a href="https://www.phpmyadmin.net/" target="_blank">phpMyAdmin</a>.
-          <p>
-            All trademarks and copyrights belong to their respective owners. The
-            purpose of this assembly is to provide one of the options for
-            organizing Laragon 6.0 and updating its packages to a modern state.
-            <strong>This is not an official release.</strong>
-            <p>This build was created without the intent of commercial gain. It is distributed freely for educational and development purposes only. No commercial use is permitted.</p>
-          </p>
+        <div class="legal text-xs mt-8 pt-6 border-t border-[#2e4a60]">
+          <span data-i18n="legal_html"
+            >This build uses third-party software:
+            <a
+              href="https://laragon.org/"
+              target="_blank"
+              class="text-[#b8d4e8] underline"
+              >Laragon</a
+            >
+            (© Le Ngoc Khoa),
+            <a
+              href="https://httpd.apache.org/"
+              target="_blank"
+              class="text-[#b8d4e8] underline"
+              >Apache HTTP Server</a
+            >,
+            <a
+              href="https://www.php.net/"
+              target="_blank"
+              class="text-[#b8d4e8] underline"
+              >PHP 8.5.6 / 8.4.19 / 8.3.30</a
+            >,
+            <a
+              href="https://www.phpmyadmin.net/"
+              target="_blank"
+              class="text-[#b8d4e8] underline"
+              >phpMyAdmin</a
+            >.
+            <p class="mt-2">
+              All trademarks and copyrights belong to their respective owners.
+              The purpose of this assembly is to provide one of the options for
+              organizing Laragon 6.0 and updating its packages to a modern
+              state. <strong>This is not an official release.</strong>
+            </p>
+            <p>
+              This build was created without the intent of commercial gain. It
+              is distributed freely for educational and development purposes
+              only. No commercial use is permitted.
+            </p></span
+          >
         </div>
-        <div class="copyright" data-i18n="copyright">
+        <div class="copyright text-center text-sm mt-8" data-i18n="copyright">
           © 2026 Laragon 6.0 Modern Build — Andrii Ovcharov.
         </div>
       </div>
