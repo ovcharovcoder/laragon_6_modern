@@ -74,8 +74,7 @@ const translations = {
     footer_faq: 'FAQ',
     footer_tech: 'Technologies',
     copyright: '© 2026 Laragon 6.0 Modern Build — Andrii Ovcharov.',
-    legal_html: `This build uses third-party software: <a href="https://laragon.org/" target="_blank">Laragon</a> (© Le Ngoc Khoa), <a href="https://httpd.apache.org/" target="_blank">Apache HTTP Server</a>, <a href="https://www.php.net/" target="_blank">PHP 8.5.6 / 8.4.19 / 8.3.30</a>, <a href="https://www.phpmyadmin.net/" target="_blank">phpMyAdmin</a>. <p>All trademarks and copyrights belong to their respective owners. The purpose of this assembly is to provide one of the options for organizing Laragon 6.0 and updating its packages to a modern state. <b>This is not an official release.</b></p>
-    <p>This build was created without the intent of commercial gain. It is distributed freely for educational and development purposes only. No commercial use is permitted.</p>`,
+    legal_html: `This build uses third-party software: <a href="https://laragon.org/" target="_blank">Laragon</a> (© Le Ngoc Khoa), <a href="https://httpd.apache.org/" target="_blank">Apache HTTP Server</a>, <a href="https://www.php.net/" target="_blank">PHP 8.5.6 / 8.4.19 / 8.3.30</a>, <a href="https://www.phpmyadmin.net/" target="_blank">phpMyAdmin</a>. <p class="mt-2">All trademarks and copyrights belong to their respective owners. The purpose of this assembly is to provide one of the options for organizing Laragon 6.0 and updating its packages to a modern state. <strong>This is not an official release.</strong></p><p>This build was created without the intent of commercial gain. It is distributed freely for educational and development purposes only. No commercial use is permitted.</p>`,
   },
   uk: {
     nav_features: 'Можливості',
@@ -154,7 +153,7 @@ const translations = {
     footer_faq: 'Питання',
     footer_tech: 'Технології',
     copyright: '© 2026 Laragon 6.0 Modern Build — Andrii Ovcharov.',
-    legal_html: `Ця збірка використовує стороннє програмне забезпечення: <a href="https://laragon.org/" target="_blank">Laragon</a> (© Le Ngoc Khoa), <a href="https://httpd.apache.org/" target="_blank">Apache HTTP Server</a>, <a href="https://www.php.net/" target="_blank">PHP 8.5.6 / 8.4.19 / 8.3.30</a>, <a href="https://www.phpmyadmin.net/" target="_blank">phpMyAdmin</a>. <p>Усі торгові марки та авторські права належать їхнім відповідним власникам. Метою створення цієї збірки є надання одного з варіантів організації роботи Laragon 6.0 та оновлення його пакетів до сучасного стану. <b>Це не офіційний реліз.</b></p><p>Цю збірку було створено без мети комерційної вигоди. Вона вільно розповсюджується лише для освітніх та розробницьких цілей. Комерційне використання заборонено.</p>`,
+    legal_html: `Ця збірка використовує стороннє програмне забезпечення: <a href="https://laragon.org/" target="_blank">Laragon</a> (© Le Ngoc Khoa), <a href="https://httpd.apache.org/" target="_blank">Apache HTTP Server</a>, <a href="https://www.php.net/" target="_blank">PHP 8.5.6 / 8.4.19 / 8.3.30</a>, <a href="https://www.phpmyadmin.net/" target="_blank">phpMyAdmin</a>. <p class="mt-2">Усі торгові марки та авторські права належать їхнім відповідним власникам. Метою створення цієї збірки є надання одного з варіантів організації роботи Laragon 6.0 та оновлення його пакетів до сучасного стану. <strong>Це не офіційний реліз.</strong></p><p>Цю збірку було створено без мети комерційної вигоди. Вона вільно розповсюджується лише для освітніх та розробницьких цілей. Комерційне використання заборонено.</p>`,
   },
 };
 
