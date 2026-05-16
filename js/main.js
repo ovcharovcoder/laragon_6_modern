@@ -9,7 +9,7 @@ const translations = {
     hero_title1: 'Laragon 6.0 Modern',
     hero_title2: 'PHP 8.5.6 Build',
     hero_desc:
-      'Portable web server for Windows. Install in 2 minutes. Everything needed for modern PHP development in one archive.',
+      'A convenient web server for Windows. Installs in 2 minutes. Everything you need for modern PHP development.',
     stat_main: 'primary version',
     stat_apache: 'VS17',
     stat_pma: 'pre-configured',
@@ -25,7 +25,6 @@ const translations = {
     card4_desc: 'Ready HTTPS out of the box',
     download_title: 'Laragon 6.0 Modern',
     download_sub: 'Full build with PHP 8.5.6, Apache VS17, phpMyAdmin.',
-    download_btn: 'Download now',
     format: 'Format',
     size_label: 'Size',
     version_label: 'Version',
@@ -36,29 +35,32 @@ const translations = {
     primary: 'Primary',
     faq_title: 'Frequently Asked Questions',
     faq_sub: 'Common questions and answers',
-    faq1_q: 'Why does the installer window close and nothing happens?',
-    faq1_a:
-      "You must run install.bat as Administrator. Right-click the file → 'Run as administrator'.",
-    faq2_q: 'After switching to PHP 8.5, phpinfo still shows PHP 8.1. Why?',
-    faq2_a:
+    faq1_q_exe: 'Why does SmartScreen show "Windows protected your PC"?',
+    faq1_a_exe:
+      'Click "More info" → "Run anyway". The installer is not digitally signed (costly for individual developers), but it\'s completely safe.',
+    faq2_q_exe: 'Can I choose the installation folder?',
+    faq2_a_exe:
+      'Yes! During installation, click "Browse" and select any folder on C:\, D:\, E:\, or any other drive.',
+    faq3_q_exe: 'After switching to PHP 8.5, phpinfo still shows PHP 8.1. Why?',
+    faq3_a_exe:
       "You need to restart the local server after changing the PHP version. Right-click Laragon in tray → 'Restart All'.",
-    faq3_q: 'What is the login and password for phpMyAdmin?',
-    faq3_a: 'Username: root, Password: (leave empty).',
-    faq4_q: 'Can I use this build on a different drive (D:, E:)?',
-    faq4_a:
-      'Yes, during installation you can choose any drive: C:\, D:\, E:\, etc. The script will automatically adjust all paths.',
-    faq5_q: 'How do I add my own PHP extensions (e.g., xdebug)?',
-    faq5_a:
-      'Copy the .dll file to the php-8.5.6\ext folder, then edit php.ini (located in the same folder) and add: extension=name_of_extension.dll. Restart Apache.',
+    faq4_q: 'What is the login and password for phpMyAdmin?',
+    faq4_a: 'Username: root, Password: (leave empty).',
+    faq5_q_exe: 'How do I uninstall Laragon?',
+    faq5_a_exe:
+      'Go to Control Panel → Programs and Features → Laragon 6.0 Modern → Uninstall. Or run uninstall.bat from the installation folder as Administrator.',
+    faq6_q: 'How do I add my own PHP extensions (e.g., xdebug)?',
+    faq6_a:
+      'Copy the .dll file to the php-8.5.6\\ext folder, then edit php.ini (located in the same folder) and add: extension=name_of_extension.dll. Restart Apache.',
     howto_title: 'How to install?',
-    step1_title: 'Extract the archive',
-    step1_desc: 'To any folder on C:, D: or other drive',
-    step2_title: 'Run install.bat',
-    step2_desc: 'As Administrator (right-click)',
-    step3_title: 'Run Laragon',
-    step3_desc: 'Select Apache VS17 and PHP 8.5.6',
-    step4_title: 'Work!',
-    step4_desc: 'Open http://localhost/hello/',
+    step1_title_exe: 'Run the installer',
+    step1_desc_exe: 'Double-click Laragon_6.0_Modern.exe',
+    step2_title_exe: 'Select destination',
+    step2_desc_exe: 'Choose any drive (C:\, D:\, E:\ etc.)',
+    step3_title_exe: 'Wait for completion',
+    step3_desc_exe: 'Installer configures everything automatically',
+    step4_title_exe: 'Work!',
+    step4_desc_exe: 'Open http://localhost/hello/ from desktop shortcut',
     db_access: 'Database access:',
     login: 'Login',
     password: 'Password',
@@ -85,7 +87,7 @@ const translations = {
     hero_title1: 'Laragon 6.0 Modern',
     hero_title2: 'Збірка з PHP 8.5.6',
     hero_desc:
-      'Портативний веб-сервер для Windows. Встановлюється за 2 хвилини. Все необхідне для сучасної PHP-розробки в одному архіві.',
+      'Зручний веб-сервер для Windows. Встановлюється за 2 хвилини. Все необхідне для сучасної PHP-розробки.',
     stat_main: 'основна версія',
     stat_apache: 'VS17',
     stat_pma: 'з готовим конфігом',
@@ -102,7 +104,6 @@ const translations = {
     card4_desc: 'Готовий HTTPS з коробки',
     download_title: 'Laragon 6.0 Modern',
     download_sub: 'Повна збірка з PHP 8.5.6, Apache VS17, phpMyAdmin.',
-    download_btn: 'Завантажити',
     format: 'Формат',
     size_label: 'Розмір',
     version_label: 'Версія',
@@ -113,31 +114,34 @@ const translations = {
     primary: 'Основна',
     faq_title: 'Часті запитання',
     faq_sub: 'Найпоширеніші питання та відповіді',
-    faq1_q:
-      'Чому при запуску інсталятора вікно закривається і нічого не відбувається?',
-    faq1_a:
-      "Інсталятор потрібно запускати від імені адміністратора. Клацніть файл правою кнопкою миші → 'Запуск від імені адміністратора'.",
-    faq2_q:
+    faq1_q_exe: 'Чому SmartScreen показує "Windows захистила ваш комп\'ютер"?',
+    faq1_a_exe:
+      'Натисніть "Докладніше" → "Виконати все одно". Інсталятор не має цифрового підпису (це коштує грошей для розробника), але він абсолютно безпечний.',
+    faq2_q_exe: 'Чи можна вибрати папку для встановлення?',
+    faq2_a_exe:
+      'Так! Під час встановлення натисніть "Огляд" та виберіть будь-яку папку на диску C:\, D:\, E:\ або іншому.',
+    faq3_q_exe:
       'Після перемикання на PHP 8.5 phpinfo все ще показує PHP 8.1. Чому?',
-    faq2_a:
+    faq3_a_exe:
       "Після зміни версії PHP потрібно перезапустити локальний сервер. Клацніть на іконку Laragon у треї → 'Restart All'.",
-    faq3_q: 'Які логін та пароль для phpMyAdmin?',
-    faq3_a: 'Користувач: root, пароль: (залиште порожнім).',
-    faq4_q: 'Чи можна використовувати цю збірку на іншому диску (D:, E:)?',
-    faq4_a:
-      'Так, під час встановлення ви можете вибрати будь-який диск: C:\, D:\, E:\ тощо. Скрипт автоматично налаштує всі шляхи.',
-    faq5_q: 'Як додати власні розширення PHP (наприклад, xdebug)?',
-    faq5_a:
-      "Скопіюйте .dll файл у папку php-8.5.6\ext, потім відредагуйте php.ini (знаходиться там само) та додайте: extension=ім'я_розширення.dll. Перезапустіть Apache.",
+    faq4_q: 'Які логін та пароль для phpMyAdmin?',
+    faq4_a: 'Користувач: root, пароль: (залиште порожнім).',
+    faq5_q_exe: 'Як видалити Laragon?',
+    faq5_a_exe:
+      'Перейдіть до Панель керування → Програми та компоненти → Laragon 6.0 Modern → Видалити. Або запустіть uninstall.bat з папки встановлення від імені адміністратора.',
+    faq6_q: 'Як додати власні розширення PHP (наприклад, xdebug)?',
+    faq6_a:
+      "Скопіюйте .dll файл у папку php-8.5.6\\ext, потім відредагуйте php.ini (знаходиться там само) та додайте: extension=ім'я_розширення.dll. Перезапустіть Apache.",
     howto_title: 'Як встановити?',
-    step1_title: 'Розпакуйте архів',
-    step1_desc: 'У будь-яку папку на диску C:, D: або іншому',
-    step2_title: 'Запустіть install.bat',
-    step2_desc: "Обов'язково від імені Адміністратора",
-    step3_title: 'Запустіть Laragon',
-    step3_desc: 'Виберіть Apache VS17 та PHP 8.5.6',
-    step4_title: 'Працюйте!',
-    step4_desc: 'Відкрийте http://localhost/hello/',
+    step1_title_exe: 'Запустіть інсталятор',
+    step1_desc_exe: 'Двічі клацніть Laragon_6.0_Modern.exe',
+    step2_title_exe: 'Виберіть папку',
+    step2_desc_exe: 'Оберіть будь-який диск (C:\, D:\, E:\ тощо)',
+    step3_title_exe: 'Зачекайте',
+    step3_desc_exe: 'Інсталятор налаштує все автоматично',
+    step4_title_exe: 'Працюйте!',
+    step4_desc_exe:
+      'Відкрийте http://localhost/hello/ з ярлика на робочому столі',
     db_access: 'Доступ до баз даних:',
     login: 'Логін',
     password: 'Пароль',
