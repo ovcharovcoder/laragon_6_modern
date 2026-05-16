@@ -1,141 +1,155 @@
-# 🐘 Laragon 6.0 Modern
+================================================================
+              LARAGON 6.0 MODERN — QUICK START GUIDE
+         PHP 8.5.6 + 8.4.19 + 8.3.30  |  Apache 2.4.66 VS17
+================================================================
 
-**Portable Laragon 6.0 build with PHP 8.5.6, Apache 2.4.66 VS17, phpMyAdmin, and a ready-to-use test project.**
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![PHP](https://img.shields.io/badge/PHP-8.5.6-777BB4?logo=php&logoColor=white)](https://php.net)
-[![Apache](https://img.shields.io/badge/Apache-2.4.66-D22128?logo=apache&logoColor=white)](https://httpd.apache.org)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)](https://microsoft.com/windows)
+  BUILD COMPONENTS
+  ────────────────────────────────────────────────────────────
+  ✅  Laragon 6.0          Clean version, no ads
+  ✅  PHP 8.5.6            Primary version (default)
+  ✅  PHP 8.4.19           Additional version
+  ✅  PHP 8.3.30           Additional version
+  ✅  Apache 2.4.66 VS17   Full PHP 8.5 support
+  ✅  phpMyAdmin 5.2.3     Pre-configured, no warnings
+  ✅  SSL                  https://localhost ready
+  ✅  Test project         http://localhost/hello/
+  ────────────────────────────────────────────────────────────
 
----
 
-## 📦 Build Components
+  INSTALLATION
+  ────────────────────────────────────────────────────────────
 
-| Component | Version | Notes |
-|-----------|---------|-------|
-| **Laragon** | 6.0 | Clean version, no ads |
-| **PHP** | 8.5.6 | Primary version |
-| **PHP** | 8.4.19 | Additional |
-| **PHP** | 8.3.30 | Additional |
-| **Apache** | 2.4.66 VS17 | PHP 8.5 support |
-| **phpMyAdmin** | 5.2.3 | Pre-configured, no warnings |
-| **SSL** | - | https://localhost |
-| **Test project** | - | http://localhost/hello/ |
+  1. Run Laragon_6.0_Modern.exe (as Administrator)
+     The installer will automatically ask for admin rights.
 
----
+  2. Select destination folder:
+       C:\Program Files\Laragon  (recommended)
+       D:\Laragon, E:\Laragon, or any custom path
 
-## 🚀 Quick Installation
+  3. Wait for the installation to complete automatically
+     (PHP, Apache, phpMyAdmin, and SSL will be configured)
 
-1. **Download** the latest release from [Releases](https://github.com/yourusername/laragon-modern/releases)
-2. **Extract** the archive to any folder
-3. **Run** `install.bat` **as Administrator** (right-click → Run as Administrator)
-4. **Select** the installation drive (C:\, D:\, E:\, etc.)
-5. **Done!** The `Laragon 6.0 Modern` shortcut will appear on your desktop
+  4. Done — launch Laragon from the desktop shortcut
+  ────────────────────────────────────────────────────────────
 
----
 
-## ⚙️ Post-Installation Setup
+  FIRST LAUNCH
+  ────────────────────────────────────────────────────────────
 
-1. Launch Laragon from the desktop shortcut
-2. In the system tray, right-click the Laragon icon and select:
-   - **Apache** → **Version** → `httpd-2.4.66-win64-VS17`
-   - **PHP** → **Version** → `php-8.5.6`
-3. Click **Start All**
+  1. Open Laragon from the desktop shortcut "Laragon"
 
----
+  2. Right-click the tray icon and set:
+       Apache  → Version → httpd-2.4.66-win64-VS17
+       PHP     → Version → php-8.5.6
 
-## 🌐 Testing Your Installation
+  3. Click "Start All"
 
-| URL | Purpose |
-|-----|---------|
-| `http://localhost/hello/` | Test project |
-| `http://localhost/phpmyadmin` | Database management |
-| `https://localhost` | SSL certificate |
+  4. Open in browser:
+       http://localhost/hello/       test project
+       http://localhost/phpmyadmin   database manager
+  ────────────────────────────────────────────────────────────
 
-**Database access:**
-- Username: `root`
-- Password: *(leave empty)*
 
----
+  SWITCHING PHP VERSIONS
+  ────────────────────────────────────────────────────────────
 
-## 🔄 Switching PHP Versions
+  Right-click tray icon → PHP → Version → select version
+  Then click "Start All" to apply.
 
-Laragon allows you to switch between installed PHP versions with one click:
+  Available versions:
+    • PHP 8.5.6   (default)
+    • PHP 8.4.19
+    • PHP 8.3.30
 
-1. Right-click the Laragon icon in the system tray
-2. **PHP** → **Version** → choose `php-8.5.6`, `php-8.4.19`, or `php-8.3.30`
-3. Restart Laragon (or click "Start All" again)
+  ! Always use Apache httpd-2.4.66-win64-VS17
+  ────────────────────────────────────────────────────────────
 
----
 
-## 📦 Adding More PHP Versions
+  DATABASE ACCESS
+  ────────────────────────────────────────────────────────────
+    Host      :  localhost
+    User      :  root
+    Password  :  (empty — just press Enter)
+    phpMyAdmin:  http://localhost/phpmyadmin
+  ────────────────────────────────────────────────────────────
 
-To add another PHP version (e.g., PHP 8.6):
 
-1. Download the ZIP archive from [windows.php.net/download](https://windows.php.net/download)
-   - ⚠️ **Must be:** Non-Thread-Safe (NTS) version!
-   - ⚠️ **Architecture:** x64
-   - ⚠️ **VS build:** VS17 (or VS16 for older versions)
+  ADDING MORE PHP VERSIONS
+  ────────────────────────────────────────────────────────────
 
-2. Extract to: `D:\laragon\bin\php\php-8.6.x`
+  1. Download ZIP from https://windows.php.net/download
+       ⚠ Non-Thread-Safe (NTS), x64, VS17 (or VS16)
 
-3. Restart Laragon – the new version will appear in the PHP → Version menu
+  2. Extract to:
+       (your Laragon folder)\bin\php\php-8.6.x
 
----
+  3. Restart Laragon — new version appears in PHP → Version
+  ────────────────────────────────────────────────────────────
 
-## 🗑️ Uninstallation
 
-1. Run `uninstall.bat` as Administrator
-2. Select the drive where Laragon is installed
-3. Optionally create a backup
-4. Confirm removal
+  UNINSTALLATION
+  ────────────────────────────────────────────────────────────
 
----
+  Method 1 (Recommended):
+    Control Panel → Programs and Features → Laragon 6.0 Modern → Uninstall
 
-## 🐛 Troubleshooting
+  Method 2:
+    Run uninstall.bat from the Laragon installation folder as Administrator
 
-### ❌ Port 80 is busy
-- Stop Skype, Teams, or IIS (World Wide Web Publishing Service)
-- Or change the port in Laragon settings
+  The uninstaller will completely remove Laragon and all its components.
+  Optionally create a backup of your sites and databases before removal.
+  ────────────────────────────────────────────────────────────
 
-### ❌ PHP doesn't work (white screen)
-- Make sure you have installed [VC++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-- Run: `D:\laragon\bin\php\php-8.5.6\php.exe -v`
-- Check Apache error logs: `D:\laragon\logs\apache_error.log`
 
-### ❌ phpMyAdmin shows "Forbidden"
-- This build includes a pre-configured `config.inc.php`
-- If it still appears, check that the file exists in `etc\apps\phpMyAdmin\`
-- Restart Apache after any changes
+  TROUBLESHOOTING
+  ────────────────────────────────────────────────────────────
 
-### ❌ HTTPS doesn't work
-- In Laragon: **Menu** → **SSL** → **Create SSL Certificate**
-- Restart Apache
+  ✗ Port 80 busy
+      Stop Skype, Teams, or IIS service
+      Or change port: Laragon → Preferences → Apache port
 
----
+  ✗ PHP not working (white screen)
+      Install VC++ Redistributable 2015–2022 (x64)
+      Test: (Laragon folder)\bin\php\php-8.5.6\php.exe -v
+      Check logs: (Laragon folder)\logs\apache_error.log
 
-## 🔧 Important Notes
+  ✗ phpMyAdmin shows "Forbidden"
+      Check that config.inc.php exists in:
+        (Laragon folder)\etc\apps\phpMyAdmin\
+      Restart Apache after any changes
 
-- ⚠️ Always run `install.bat` as Administrator
-- ⚠️ If you have issues, restart your computer
-- ⚠️ Use Apache VS17 version – do NOT use the default one
-- ⚠️ The test project "hello" is available at `/hello/`
+  ✗ HTTPS not working
+      Laragon menu → SSL → Create SSL Certificate
+      Restart Apache
 
----
+  ✗ "Windows protected your PC" (SmartScreen)
+      Click "More info" → "Run anyway"
+      This is normal for unsigned installers
+  ────────────────────────────────────────────────────────────
 
-## 📞 Contact & Support
 
-- **Telegram:** [@Ovcharov_Andrii](https://t.me/Ovcharov_Andrii)
-- **GitHub:** [github.com/laragon_6_modern](https://github.com/ovcharovcoder/laragon_6_modern)
-- **Email:** ovcharovcoder@gmail.com
+  INSTALLER PARAMETERS (Advanced)
+  ────────────────────────────────────────────────────────────
 
----
+  Silent installation:
+    Laragon_6.0_Modern.exe /VERYSILENT /SUPPRESSMSGBOXES
 
-## 📄 License
+  Specify custom install directory:
+    Laragon_6.0_Modern.exe /DIR="D:\MyWebServer"
 
-This project is provided as-is for educational and development purposes.  
-Laragon, Apache, PHP, and phpMyAdmin are property of their respective owners.
+  Silent uninstall:
+    (from Control Panel or using uninstall.exe)
+  ────────────────────────────────────────────────────────────
 
----
 
-**© 2026 Laragon 6.0 Modern Build — Andrii Ovcharov**
+  SUPPORT & CONTACTS
+  ────────────────────────────────────────────────────────────
+    Telegram  :  https://t.me/Ovcharov_Andrii
+    GitHub    :  https://github.com/ovcharovcoder/laragon_6_modern
+    Email     :  ovcharovcoder@gmail.com
+  ────────────────────────────────────────────────────────────
+
+================================================================
+            © 2026  Laragon 6.0 Modern Build  |  Andrii Ovcharov
+================================================================
