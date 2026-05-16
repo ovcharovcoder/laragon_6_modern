@@ -142,5 +142,4 @@ Laragon_6.0_Modern_Setup.exe /DIR="D:\MyWebServer"
 
 ## SUPPORT & CONTACTS
 - Telegram  :  https://t.me/Ovcharov_Andrii
-- GitHub    :  https://github.com/ovcharovcoder/laragon_6_modern
 - Email     :  ovcharovcoder@gmail.com
