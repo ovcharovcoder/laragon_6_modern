@@ -20,7 +20,7 @@
 
 ## 🚀 Installation
 
-1. **Run `Laragon_6.0_Modern_Setup.exe`** (as Administrator)  
+1. **Run `Laragon_6.0_Modern.exe`** (as Administrator)  
    The installer will automatically ask for admin rights.
 
 2. **Select destination folder**  
